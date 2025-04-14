@@ -3,6 +3,7 @@ import { IconCloud } from "@/components/magicui/icon-cloud";
 import TechStackCard, { Tech } from "./components/tech-stack-card";
 import { Code, Server, Database, Cloud, Bot, Settings } from "lucide-react";
 import { getSvgPath } from "@/lib/svg-utils";
+import OrbitingTech from "./components/orbiting-tech";
 
 // Icon slug arrays removed as they're no longer needed
 const TechStackSection = () => {
@@ -192,12 +193,22 @@ const TechStackSection = () => {
     },
   ];
 
+  const colors = [
+    "text-red-500",
+    "text-blue-500",
+    "text-green-500",
+    "text-yellow-500",
+    "text-purple-500",
+    "text-pink-500",
+  ];
+
   return (
     <section className="relative min-h-screen flex items-center w-full">
       <GridBackground gridColor="#94a3b8" gridOpacity={10} gridSize={40} />
       <div className="container max-w-7xl mx-auto px-8">
         <div className="flex items-center justify-center">
-          <IconCloud />
+          {/* <IconCloud /> */}
+          <OrbitingTech />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <TechStackCard
@@ -205,36 +216,42 @@ const TechStackSection = () => {
             description="Developing engaging and user-friendly web experiences with a focus on responsiveness and interactivity."
             logo={Code}
             techs={frontendTechs}
+            logoColor={colors[0]}
           />
           <TechStackCard
             title="Backend Development"
             description="Building robust server-side applications and APIs that power web applications."
             logo={Server}
             techs={backendTechs}
+            logoColor={colors[1]}
           />
           <TechStackCard
             title="AI & ML"
             description="Leveraging artificial intelligence and machine learning technologies to create intelligent solutions."
             logo={Bot}
             techs={aiTechs}
+            logoColor={colors[2]}
           />
           <TechStackCard
             title="Database"
             description="Managing and organizing data with powerful database solutions for efficient data storage and retrieval."
             logo={Database}
             techs={databaseTechs}
+            logoColor={colors[3]}
           />
           <TechStackCard
             title="DevOps"
             description="Implementing continuous integration and delivery pipelines for efficient software development."
             logo={Settings}
             techs={devopsTechs}
+            logoColor={colors[4]}
           />
           <TechStackCard
             title="Other Tools"
             description="Additional tools and technologies that enhance the development workflow."
             logo={Cloud}
             techs={otherTechs}
+            logoColor={colors[5]}
           />
         </div>
       </div>

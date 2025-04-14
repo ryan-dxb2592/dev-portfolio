@@ -19,7 +19,9 @@ const AboutSection = () => {
                 />
               </div>
               <div className="flex gap-4 justify-start">
-                <CertBadge />
+                <CertBadge show={true} />
+                <CertBadge show={false} />
+                <CertBadge show={false} />
               </div>
             </div>
           </div>
