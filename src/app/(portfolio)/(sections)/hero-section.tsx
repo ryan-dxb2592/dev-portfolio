@@ -3,6 +3,7 @@ import Image from "next/image";
 import { DeveloperProfile } from "@/components/common/code-block/code-profile";
 import { FlipWords } from "@/components/ui/flip-words";
 import { Button } from "@/components/ui/button";
+import { Meteors } from "@/components/common/meteors";
 
 const HeroSection = () => {
   const words = [
@@ -12,7 +13,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="min-h-screen flex items-center w-full">
+    <section className=" min-h-screen flex items-center w-full">
       <GridBackground gridColor="#94a3b8" gridOpacity={10} gridSize={40} />
       <div className="relative container max-w-7xl flex flex-col pt-24 lg:pt-0 pb-10 lg:flex-row mx-auto px-4 space-y-1 gap-x-10 gap-y-16 justify-center items-center">
         {/* Left Side */}
