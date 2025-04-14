@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import CertBadge from "./components/cert-badge";
+import Image from "next/image";
 
 const AboutSection = () => {
   return (
@@ -8,8 +9,15 @@ const AboutSection = () => {
         <div className="flex flex-col-reverse md:flex-row pt-10 md:pt-0 gap-12">
           {/* Left Side */}
           <div className="md:w-1/2 flex flex-col gap-4 shrink-0 items-center justify-center">
-            <div className="flex flex-col gap-4">
-              <div className="aspect-4/6 max-h-96 flex shrink-0 w-96 h-full bg-red-500 rounded-md"></div>
+            <div className="flex flex-col gap-4 mt-10">
+              <div className="relative aspect-square  flex shrink-0 w-[400px] h-[400px] rounded-md overflow-hidden">
+                <Image
+                  src="/pro-pic.jpg"
+                  alt="Profile Picture"
+                  fill
+                  className="object-cover "
+                />
+              </div>
               <div className="flex gap-4 justify-start">
                 <CertBadge />
               </div>
